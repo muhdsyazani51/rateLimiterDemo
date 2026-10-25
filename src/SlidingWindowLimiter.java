@@ -5,7 +5,7 @@ public class SlidingWindowLimiter implements IRateLimiter{
 
     final ConcurrentHashMap<String, LinkedList<Long>> requests = new ConcurrentHashMap<>();
     final int limit;
-    final long windowUnit = 10000L;
+    final long windowUnit = 60000L;
 
     public SlidingWindowLimiter(int limit){
         this.limit = limit;
